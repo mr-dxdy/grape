@@ -11,7 +11,7 @@
 
 ## Table of Contents
 
-- [What is Grape?](#what-is-grape)
+- [What is Grape?](#whatisgrape)
 - [Stable Release](#stable-release)
 - [Project Resources](#project-resources)
 - [Installation](#installation)
