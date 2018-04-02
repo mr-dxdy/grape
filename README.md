@@ -1555,6 +1555,7 @@ params do
   requires :name, values: { value: 1..10, message: 'not in range from 1 to 10' }, allow_blank: { value: false, message: 'cannot be blank' }, regexp: { value: /^[a-z]+$/, message: 'format is invalid' }, message: 'is required'
 end
 ```
+
 #### `all_or_none_of`
 
 ```ruby
@@ -1576,6 +1577,7 @@ params do
   mutually_exclusive :beer, :wine, :juice, message: "are mutually exclusive cannot pass both params"
 end
 ```
+
 #### `exactly_one_of`
 
 ```ruby
@@ -1586,6 +1588,7 @@ params do
   exactly_one_of :beer, :wine, :juice, message: {exactly_one: "are missing, exactly one parameter is required", mutual_exclusion: "are mutually exclusive, exactly one parameter is required"}
 end
 ```
+
 #### `at_least_one_of`
 
 ```ruby
@@ -1596,6 +1599,7 @@ params do
   at_least_one_of :beer, :wine, :juice, message: "are missing, please specify at least one param"
 end
 ```
+
 #### `Coerce`
 
 ```ruby
@@ -1603,6 +1607,7 @@ params do
   requires :int, type: {value: Integer, message: "type cast is invalid" }
 end
 ```
+
 #### `With Lambdas`
 
 ```ruby
@@ -1610,6 +1615,7 @@ params do
   requires :name, values: { value: -> { (1..10).to_a }, message: 'not in range from 1 to 10' }
 end
 ```
+
 #### `Pass symbols for i18n translations`
 
 You can pass a symbol if you want i18n translations for your custom validation messages.
@@ -1657,6 +1663,7 @@ params do
   requires :name, values: { value: -> { (1..10).to_a }, message: 'not in range from 1 to 10' }, default: 5
 end
 ```
+
 ## Headers
 
 Request headers are available through the `headers` helper or from `env` in their original form.
